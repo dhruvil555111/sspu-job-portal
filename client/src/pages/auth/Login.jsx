@@ -46,11 +46,11 @@ const Login = () => {
         <div className="bg-white dark:bg-dark-800 rounded-3xl shadow-2xl border border-dark-100 dark:border-dark-700 p-8 sm:p-10">
           {/* Header */}
           <div className="text-center mb-8">
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center mx-auto mb-4 shadow-lg shadow-primary-500/25">
-              <span className="text-white font-bold text-2xl font-display">LJ</span>
+            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-600 to-accent-500 flex items-center justify-center mx-auto mb-4 shadow-lg shadow-primary-500/25">
+              <span className="text-white font-bold text-xl font-display">SSPU</span>
             </div>
             <h1 className="text-2xl font-display font-bold text-dark-900 dark:text-white">Welcome Back</h1>
-            <p className="text-dark-500 mt-2 text-sm">Sign in to your LJ Career Connect account</p>
+            <p className="text-dark-500 mt-2 text-sm">Sign in to your SSPU Career Connect account</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-5">
@@ -97,9 +97,9 @@ const Login = () => {
           <div className="mt-6 p-4 bg-dark-50 dark:bg-dark-700 rounded-xl">
             <p className="text-xs font-semibold text-dark-500 mb-2 text-center">Demo Credentials</p>
             <div className="grid grid-cols-2 gap-2 text-xs text-dark-600 dark:text-dark-300">
-              <button onClick={() => setFormData({ email: 'admin@ljku.edu.in', password: 'admin123' })} className="p-2 bg-white dark:bg-dark-600 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors text-center">Super Admin</button>
-              <button onClick={() => setFormData({ email: 'tpo@ljku.edu.in', password: 'tpo123' })} className="p-2 bg-white dark:bg-dark-600 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors text-center">TPO</button>
-              <button onClick={() => setFormData({ email: 'student@ljku.edu.in', password: 'student123' })} className="p-2 bg-white dark:bg-dark-600 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors text-center">Student</button>
+              <button onClick={() => setFormData({ email: 'admin@sspu.edu.in', password: 'admin123' })} className="p-2 bg-white dark:bg-dark-600 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors text-center">Super Admin</button>
+              <button onClick={() => setFormData({ email: 'tpo@sspu.edu.in', password: 'tpo123' })} className="p-2 bg-white dark:bg-dark-600 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors text-center">TPO</button>
+              <button onClick={() => setFormData({ email: 'student@sspu.edu.in', password: 'student123' })} className="p-2 bg-white dark:bg-dark-600 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors text-center">Student</button>
               <button onClick={() => setFormData({ email: 'recruiter@company.com', password: 'recruiter123' })} className="p-2 bg-white dark:bg-dark-600 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors text-center">Recruiter</button>
             </div>
           </div>

@@ -56,7 +56,7 @@ const Calendar = () => {
           type: 'drive',
           date: new Date(d.date),
           time: 'All Day',
-          venue: d.venue || 'LJ Campus',
+          venue: d.venue || 'SSPU Campus',
           extra: d.title,
         }));
 

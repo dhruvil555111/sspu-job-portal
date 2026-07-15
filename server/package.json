@@ -1,7 +1,7 @@
 {
-  "name": "lj-career-connect-server",
+  "name": "sspu-career-connect-server",
   "version": "1.0.0",
-  "description": "LJ Career Connect - College Job Portal Backend",
+  "description": "SSPU Career Connect - Shree Saurashtra Patel University Job Portal Backend",
   "main": "server.js",
   "type": "module",
   "scripts": {

@@ -68,8 +68,8 @@ export const scheduleInterview = async (req, res) => {
       subject: `Interview Scheduled - ${application.job.title}`,
       html: `
         <div style="font-family: 'Segoe UI', sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 12px 12px 0 0; text-align: center;">
-            <h1 style="color: white; margin: 0;">LJ Career Connect</h1>
+          <div style="background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); padding: 30px; border-radius: 12px 12px 0 0; text-align: center;">
+            <h1 style="color: white; margin: 0;">SSPU Career Connect</h1>
           </div>
           <div style="background: #ffffff; padding: 30px; border: 1px solid #e5e7eb; border-radius: 0 0 12px 12px;">
             <h2 style="color: #1f2937;">Hello ${application.user.name}!</h2>

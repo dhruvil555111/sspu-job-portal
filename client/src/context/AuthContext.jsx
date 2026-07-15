@@ -51,6 +51,19 @@ export const AuthProvider = ({ children }) => {
     return data;
   };
 
+  const loadUser = async () => {
+    try {
+      const { data } = await authAPI.getMe();
+      setUser(data.user);
+      setIsAuthenticated(true);
+    } catch {
+      localStorage.removeItem('token');
+      localStorage.removeItem('user');
+      setUser(null);
+      setIsAuthenticated(false);
+    }
+  };
+
   const logout = async () => {
     try { await authAPI.logout(); } catch {}
     localStorage.removeItem('token');
@@ -65,7 +78,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, loading, isAuthenticated, login, register, logout, updateUser }}>
+    <AuthContext.Provider value={{ user, loading, isAuthenticated, login, register, logout, updateUser, loadUser }}>
       {children}
     </AuthContext.Provider>
   );

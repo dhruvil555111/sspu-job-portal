@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useAuth } from '../../context/AuthContext';
 import { adminAPI } from '../../services/api';
-import { HiOutlineUsers, HiOutlineOfficeBuilding, HiOutlineBriefcase, HiOutlineAcademicCap, HiOutlineChartBar, HiOutlineTrendingUp, HiOutlineBell, HiOutlineShieldCheck, HiOutlineDownload } from 'react-icons/hi';
+import { HiOutlineUsers, HiOutlineOfficeBuilding, HiOutlineBriefcase, HiOutlineAcademicCap, HiOutlineChartBar, HiOutlineTrendingUp, HiOutlineBell, HiOutlineShieldCheck, HiOutlineDownload, HiOutlineCalendar } from 'react-icons/hi';
 import toast from 'react-hot-toast';
 
 const AdminDashboard = () => {
@@ -75,7 +76,7 @@ const AdminDashboard = () => {
       const url = window.URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
-      link.setAttribute('download', `LJ_University_Placement_Report_${new Date().getFullYear()}.csv`);
+      link.setAttribute('download', `SSPU_Placement_Report_${new Date().getFullYear()}.csv`);
       document.body.appendChild(link);
       link.click();
       link.remove();

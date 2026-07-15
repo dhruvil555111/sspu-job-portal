@@ -46,7 +46,7 @@ export const getPlacementReport = async (req, res) => {
 
     // Set headers for download
     res.setHeader('Content-Type', 'text/csv');
-    res.setHeader('Content-Disposition', 'attachment; filename=LJ_University_Placement_Report.csv');
+    res.setHeader('Content-Disposition', 'attachment; filename=SSPU_Placement_Report.csv');
     
     return res.status(200).send(csvContent);
   } catch (error) {

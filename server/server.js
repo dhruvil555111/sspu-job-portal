@@ -67,7 +67,7 @@ app.use('/api/reports', reportRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {
-  res.status(200).json({ success: true, message: 'LJ Career Connect API is running', timestamp: new Date() });
+  res.status(200).json({ success: true, message: 'SSPU Career Connect API is running', timestamp: new Date() });
 });
 
 // Public departments route
@@ -123,7 +123,7 @@ seedDepartments();
 // Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`🚀 LJ Career Connect Server running on port ${PORT}`);
+  console.log(`🚀 SSPU Career Connect Server running on port ${PORT}`);
   console.log(`📋 Environment: ${process.env.NODE_ENV || 'development'}`);
 });
 

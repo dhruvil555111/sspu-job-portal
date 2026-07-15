@@ -16,7 +16,7 @@ cloudinary.config({
 const imageStorage = new CloudinaryStorage({
   cloudinary,
   params: {
-    folder: 'lj-career-connect/profiles',
+    folder: 'sspu-career-connect/profiles',
     allowed_formats: ['jpg', 'jpeg', 'png', 'webp'],
     transformation: [{ width: 500, height: 500, crop: 'limit' }],
   },
@@ -26,7 +26,7 @@ const imageStorage = new CloudinaryStorage({
 const resumeStorage = new CloudinaryStorage({
   cloudinary,
   params: {
-    folder: 'lj-career-connect/resumes',
+    folder: 'sspu-career-connect/resumes',
     allowed_formats: ['pdf'],
     resource_type: 'raw',
   },
@@ -36,7 +36,7 @@ const resumeStorage = new CloudinaryStorage({
 const logoStorage = new CloudinaryStorage({
   cloudinary,
   params: {
-    folder: 'lj-career-connect/logos',
+    folder: 'sspu-career-connect/logos',
     allowed_formats: ['jpg', 'jpeg', 'png', 'webp', 'svg'],
     transformation: [{ width: 300, height: 300, crop: 'limit' }],
   },

@@ -49,7 +49,7 @@ const About = () => {
             Empowering Careers, Shaping Future Leaders
           </h1>
           <p className="text-dark-200 mt-4 max-w-2xl mx-auto text-base">
-            LJ University Central Placement Cell acts as a vital interface between academic excellence and career aspirations, delivering world-class talent to industries globally.
+            Shree Saurashtra Patel University Central Placement Cell acts as a vital interface between academic excellence and career aspirations, delivering world-class talent to industries globally.
           </p>
         </motion.div>
 
@@ -77,21 +77,21 @@ const About = () => {
             </h2>
             <div className="space-y-4 text-dark-600 dark:text-dark-300 leading-relaxed text-sm md:text-base">
               <p>
-                "At LJ University, we believe in grooming students not just for professional excellence but to become responsible and proactive builders of society. The Central Placement Cell ensures that our curriculum matches industrial parameters, organizing specialized bootcamps and certifications that help our students stay ahead of the technology curve."
+                "At Shree Saurashtra Patel University, we believe in grooming students not just for professional excellence but to become responsible and proactive builders of society. The Central Placement Cell ensures that our curriculum matches industrial parameters, organizing specialized bootcamps and certifications that help our students stay ahead of the technology curve."
               </p>
               <p>
                 "We extend our heartfelt gratitude to our recruitment partners who continue to trust our graduates, and we welcome new partners to explore our campus talent."
               </p>
             </div>
             <div className="mt-6">
-              <h4 className="font-display font-bold text-dark-900 dark:text-white">Dr. Manish Shah</h4>
-              <p className="text-xs text-primary-500 font-semibold uppercase mt-0.5">Head of Placements, LJ University</p>
+              <h4 className="font-display font-bold text-dark-900 dark:text-white">Prof. Rajesh Patel</h4>
+              <p className="text-xs text-primary-500 font-semibold uppercase mt-0.5">Head of Placements, Shree Saurashtra Patel University</p>
             </div>
           </div>
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-tr from-primary-500 to-pink-500 rounded-3xl blur-2xl opacity-10 dark:opacity-20 animate-pulse-glow" />
             <div className="relative bg-white dark:bg-dark-900 rounded-3xl p-8 border border-dark-100 dark:border-dark-800 shadow-xl">
-              <h3 className="text-xl font-display font-bold text-dark-900 dark:text-white mb-6">LJ Placement Policy</h3>
+              <h3 className="text-xl font-display font-bold text-dark-900 dark:text-white mb-6">SSPU Placement Policy</h3>
               <ul className="space-y-4 text-sm text-dark-600 dark:text-dark-300">
                 <li className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary-500 mt-2 shrink-0" />

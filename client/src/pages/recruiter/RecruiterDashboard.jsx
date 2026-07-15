@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAuth } from '../../context/AuthContext';
 import { recruiterAPI, interviewAPI } from '../../services/api';
@@ -7,7 +8,7 @@ import toast from 'react-hot-toast';
 
 const RecruiterDashboard = () => {
   const { user } = useAuth();
-  const [stats, setStats] = useState({ totalJobs: 0, activeJobs: 0, totalApplications: 0, shortlisted: 0, selected: 0 });
+  const [stats, setStats] = useState({ totalPostings: 0, activePostings: 0, applicationsReceived: 0, shortlistedCandidates: 0, hiredCandidates: 0 });
   const [recentApps, setRecentApps] = useState([]);
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState('all');
@@ -105,17 +106,17 @@ const RecruiterDashboard = () => {
           <h1 className="text-2xl sm:text-3xl font-display font-bold text-dark-900 dark:text-white">
             Recruiter <span className="text-gradient">Console</span>
           </h1>
-          <p className="text-xs text-dark-500 mt-1">Acquire and manage student talent for LJ University.</p>
+          <p className="text-xs text-dark-500 mt-1">Acquire and manage student talent for Shree Saurashtra Patel University.</p>
         </motion.div>
 
         {/* Stats Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
           {[
-            { label: 'Total Postings', value: stats.totalJobs, icon: <HiOutlineBriefcase />, color: 'from-blue-505 to-cyan-400' },
-            { label: 'Active Postings', value: stats.activeJobs, icon: <HiOutlineCheckCircle />, color: 'from-emerald-500 to-teal-400' },
-            { label: 'Applications Recd', value: stats.totalApplications, icon: <HiOutlineDocumentText />, color: 'from-purple-500 to-pink-400' },
-            { label: 'Shortlisted Candidates', value: stats.shortlisted, icon: <HiOutlineUsers />, color: 'from-amber-500 to-orange-400' },
-            { label: 'Hired Candidates', value: stats.selected, icon: <HiOutlineTrendingUp />, color: 'from-rose-500 to-red-400' },
+            { label: 'Total Postings', value: stats.totalPostings, icon: <HiOutlineBriefcase />, color: 'from-blue-505 to-cyan-400' },
+            { label: 'Active Postings', value: stats.activePostings, icon: <HiOutlineCheckCircle />, color: 'from-emerald-500 to-teal-400' },
+            { label: 'Applications Recd', value: stats.applicationsReceived, icon: <HiOutlineDocumentText />, color: 'from-purple-500 to-pink-400' },
+            { label: 'Shortlisted Candidates', value: stats.shortlistedCandidates, icon: <HiOutlineUsers />, color: 'from-amber-500 to-orange-400' },
+            { label: 'Hired Candidates', value: stats.hiredCandidates, icon: <HiOutlineTrendingUp />, color: 'from-rose-500 to-red-400' },
           ].map((s, i) => (
             <motion.div
               key={i}
@@ -205,7 +206,7 @@ const RecruiterDashboard = () => {
             <div className="bg-gradient-to-br from-primary-600 to-accent-500 rounded-3xl p-6 text-white shadow-lg">
               <HiOutlineBriefcase className="w-8 h-8 mb-4" />
               <h3 className="font-display font-bold text-lg mb-2">Create Job Posting</h3>
-              <p className="text-white/80 text-xs mb-4">Post job and internship drives for LJ University students.</p>
+              <p className="text-white/80 text-xs mb-4">Post job and internship drives for Shree Saurashtra Patel University students.</p>
               <Link to="/jobs" className="block w-full text-center py-2 bg-white text-primary-700 font-bold rounded-xl hover:bg-white/90 transition-all text-xs">
                 Post Job Opening
               </Link>

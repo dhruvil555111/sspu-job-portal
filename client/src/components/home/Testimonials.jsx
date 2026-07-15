@@ -3,10 +3,10 @@ import { useState } from 'react';
 import { HiOutlineStar, HiOutlineChevronLeft, HiOutlineChevronRight } from 'react-icons/hi';
 
 const testimonials = [
-  { name: 'Priya Sharma', role: 'Software Engineer at Google', dept: 'Computer Engineering', text: 'LJ Career Connect made my placement journey seamless. Got placed at Google with 42 LPA package!', rating: 5, year: '2024' },
-  { name: 'Rahul Patel', role: 'Data Scientist at Amazon', dept: 'MCA', text: 'The AI-powered job recommendations helped me find the perfect role. The platform is incredibly user-friendly.', rating: 5, year: '2024' },
-  { name: 'Anisha Desai', role: 'Product Manager at Microsoft', dept: 'MBA', text: 'From resume building to interview preparation, LJ Career Connect supported me at every step.', rating: 5, year: '2023' },
-  { name: 'Karan Shah', role: 'DevOps Engineer at TCS', dept: 'B.Sc IT', text: 'The placement cell and this portal together created the best placement experience. Highly recommended!', rating: 4, year: '2024' },
+  { name: 'Priya Sharma', role: 'Software Engineer at Google', dept: 'Computer Science', text: 'SSPU Career Connect made my placement journey seamless. Got placed at Google with 42 LPA package!', rating: 5, year: '2024' },
+  { name: 'Rahul Patel', role: 'Data Scientist at Amazon', dept: 'Information Technology', text: 'The AI-powered job recommendations helped me find the perfect role. The platform is incredibly user-friendly.', rating: 5, year: '2024' },
+  { name: 'Anisha Desai', role: 'Product Manager at Microsoft', dept: 'Management (MBA)', text: 'From resume building to interview preparation, SSPU Career Connect supported me at every step.', rating: 5, year: '2023' },
+  { name: 'Karan Shah', role: 'DevOps Engineer at TCS', dept: 'Information Technology', text: 'The placement cell and this portal together created the best placement experience. Highly recommended!', rating: 4, year: '2024' },
 ];
 
 const Testimonials = () => {

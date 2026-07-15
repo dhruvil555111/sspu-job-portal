@@ -25,6 +25,11 @@ import Contact from './pages/Contact';
 import Calendar from './pages/Calendar';
 import AITools from './pages/AITools';
 import StudentProfile from './pages/student/StudentProfile';
+import Departments from './pages/Departments';
+import ForgotPassword from './pages/auth/ForgotPassword';
+import VerifyOTP from './pages/auth/VerifyOTP';
+import JobDetails from './pages/jobs/JobDetails';
+import Candidates from './pages/Candidates';
 
 function App() {
   return (
@@ -40,6 +45,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/jobs" element={<JobsListing />} />
+              <Route path="/jobs/:id" element={<JobDetails />} />
               <Route path="/about" element={<About />} />
               <Route path="/companies" element={<Companies />} />
               <Route path="/placement-drives" element={
@@ -75,9 +81,13 @@ function App() {
                 <ProtectedRoute roles={['tpo', 'superadmin', 'coordinator']}><AdminDashboard /></ProtectedRoute>
               } />
 
-              {/* Placeholder routes for navigation */}
-              <Route path="/departments" element={<PlaceholderPage title="Departments" desc="Browse all university departments" />} />
-              <Route path="/forgot-password" element={<PlaceholderPage title="Forgot Password" desc="Reset your password via OTP" />} />
+              {/* Actual routes for navigation */}
+              <Route path="/candidates" element={<Candidates />} />
+              <Route path="/departments" element={<Departments />} />
+              <Route path="/forgot-password" element={<ForgotPassword />} />
+              <Route path="/verify-otp" element={
+                <ProtectedRoute roles={['student', 'alumni', 'recruiter', 'tpo', 'superadmin', 'coordinator']}><VerifyOTP /></ProtectedRoute>
+              } />
 
               {/* 404 */}
               <Route path="*" element={

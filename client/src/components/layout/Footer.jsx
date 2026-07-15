@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { HiOutlineMail, HiOutlinePhone, HiOutlineLocationMarker } from 'react-icons/hi';
 import { FaLinkedinIn, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
+import logo from '../../assets/logo.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,7 +10,7 @@ const Footer = () => {
     { name: 'Departments', path: '/departments' },
     { name: 'Companies', path: '/companies' },
     { name: 'Placement Drives', path: '/placement-drives' },
-    { name: 'Training Programs', path: '/training' },
+    { name: 'Training Programs', path: '/training-programs' },
   ];
   const forStudents = [
     { name: 'Register', path: '/register' },
@@ -26,10 +27,10 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-dark-900 text-white relative overflow-hidden">
+    <footer className="bg-dark-950 text-white relative overflow-hidden">
       {/* Decorative gradient */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-500 via-accent-500 to-primary-500" />
-      <div className="absolute top-0 right-0 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-650 via-accent-500 to-primary-650" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-primary-600/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent-500/5 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8 relative z-10">
@@ -37,19 +38,17 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <Link to="/" className="flex items-center gap-3 mb-5">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-xl font-display">LJ</span>
-              </div>
+              <img src={logo} alt="SSPU Logo" className="w-11 h-11 object-contain rounded-xl bg-white p-0.5" />
               <div>
-                <h3 className="font-display font-bold text-xl">Career Connect</h3>
-                <p className="text-xs text-primary-400 tracking-wider uppercase">LJ University</p>
+                <h3 className="font-display font-bold text-lg leading-snug">Career Connect</h3>
+                <p className="text-[10px] text-accent-500 font-extrabold tracking-wider uppercase">SSPU Rajkot</p>
               </div>
             </Link>
-            <p className="text-dark-400 text-sm leading-relaxed mb-5">Empowering students with world-class placement opportunities. Connecting talent with top recruiters across India.</p>
+            <p className="text-dark-400 text-sm leading-relaxed mb-5">Empowering students with world-class placement opportunities. Connecting talent with top recruiters globally.</p>
             <div className="space-y-2.5">
-              <a href="mailto:placement@ljku.edu.in" className="flex items-center gap-3 text-dark-400 hover:text-primary-400 transition-colors text-sm"><HiOutlineMail className="w-4 h-4" /> placement@ljku.edu.in</a>
-              <a href="tel:+911234567890" className="flex items-center gap-3 text-dark-400 hover:text-primary-400 transition-colors text-sm"><HiOutlinePhone className="w-4 h-4" /> 1800-121-0082</a>
-              <p className="flex items-center gap-3 text-dark-400 text-sm"><HiOutlineLocationMarker className="w-4 h-4" /> Ahmedabad, Gujarat, India</p>
+              <a href="mailto:placements@sspu.edu.in" className="flex items-center gap-3 text-dark-400 hover:text-accent-400 transition-colors text-sm"><HiOutlineMail className="w-4 h-4" /> placements@sspu.edu.in</a>
+              <a href="tel:+9118001210082" className="flex items-center gap-3 text-dark-400 hover:text-accent-400 transition-colors text-sm"><HiOutlinePhone className="w-4 h-4" /> 1800-121-0082</a>
+              <p className="flex items-center gap-3 text-dark-400 text-sm"><HiOutlineLocationMarker className="w-4 h-4" /> Rajkot, Gujarat, India</p>
             </div>
           </div>
 
@@ -91,7 +90,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-dark-800 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-dark-500 text-sm">© {currentYear} LJ Career Connect. All rights reserved.</p>
+          <p className="text-dark-500 text-sm">© {currentYear} SSPU Career Connect. All rights reserved.</p>
           <div className="flex items-center gap-6 text-sm text-dark-500">
             <Link to="/privacy" className="hover:text-primary-400 transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-primary-400 transition-colors">Terms of Service</Link>

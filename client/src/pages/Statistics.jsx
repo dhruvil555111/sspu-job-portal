@@ -61,7 +61,7 @@ const Statistics = () => {
       package: '45 LPA',
       dept: 'B.E. Computer Engineering',
       img: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150',
-      quote: 'The mock interview drills and technical coding training at LJ Cell helped me confidently clear Google interviews.',
+      quote: 'The mock interview drills and technical coding training at SSPU Placement Cell helped me confidently clear Google interviews.',
     },
     {
       name: 'Nisha Shah',
@@ -136,8 +136,8 @@ const Statistics = () => {
                   <XAxis dataKey="name" stroke="#64748b" fontSize={11} tickLine={false} />
                   <YAxis stroke="#64748b" fontSize={11} tickLine={false} />
                   <Tooltip cursor={{ fill: 'transparent' }} contentStyle={{ borderRadius: '12px', background: '#1e293b', border: 'none', color: '#fff' }} />
-                  <Bar dataKey="placed" name="Placed Students" fill="#6366f1" radius={[4, 4, 0, 0]} />
-                  <Bar dataKey="total" name="Total Students" fill="#cbd5e1" radius={[4, 4, 0, 0]} opacity={0.4} />
+                  <Bar dataKey="placed" name="Placed Students" fill="#1e3a8a" radius={[4, 4, 0, 0]} />
+                  <Bar dataKey="total" name="Total Students" fill="#f59e0b" radius={[4, 4, 0, 0]} opacity={0.4} />
                 </BarChart>
               </ResponsiveContainer>
             </div>
@@ -157,16 +157,16 @@ const Statistics = () => {
                   <Tooltip contentStyle={{ borderRadius: '12px', background: '#1e293b', border: 'none', color: '#fff' }} />
                   <defs>
                     <linearGradient id="colorHighest" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="#ec4899" stopOpacity={0.2} />
-                      <stop offset="95%" stopColor="#ec4899" stopOpacity={0} />
+                      <stop offset="5%" stopColor="#fbbf24" stopOpacity={0.2} />
+                      <stop offset="95%" stopColor="#fbbf24" stopOpacity={0} />
                     </linearGradient>
                     <linearGradient id="colorAvg" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="#6366f1" stopOpacity={0.2} />
-                      <stop offset="95%" stopColor="#6366f1" stopOpacity={0} />
+                      <stop offset="5%" stopColor="#1e3a8a" stopOpacity={0.2} />
+                      <stop offset="95%" stopColor="#1e3a8a" stopOpacity={0} />
                     </linearGradient>
                   </defs>
-                  <Area type="monotone" dataKey="highest" name="Highest (LPA)" stroke="#ec4899" fillOpacity={1} fill="url(#colorHighest)" strokeWidth={2} />
-                  <Area type="monotone" dataKey="average" name="Average (LPA)" stroke="#6366f1" fillOpacity={1} fill="url(#colorAvg)" strokeWidth={2} />
+                  <Area type="monotone" dataKey="highest" name="Highest (LPA)" stroke="#fbbf24" fillOpacity={1} fill="url(#colorHighest)" strokeWidth={2} />
+                  <Area type="monotone" dataKey="average" name="Average (LPA)" stroke="#1e3a8a" fillOpacity={1} fill="url(#colorAvg)" strokeWidth={2} />
                 </AreaChart>
               </ResponsiveContainer>
             </div>

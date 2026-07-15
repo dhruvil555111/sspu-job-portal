@@ -18,9 +18,9 @@ const Contact = () => {
   };
 
   const contactInfo = [
-    { title: 'Email Queries', detail: 'placements@ljku.edu.in', sub: 'For company registration & drives', icon: <HiOutlineMail className="w-6 h-6 text-primary-500" /> },
-    { title: 'Helpline Number', detail: '+91 79 26750411', sub: 'Mon to Sat: 9:00 AM to 5:00 PM', icon: <HiOutlinePhone className="w-6 h-6 text-pink-500" /> },
-    { title: 'Placement Address', detail: 'Central Placement Office, LJ Campus', sub: 'S.G. Highway, Ahmedabad, Gujarat 382210', icon: <HiOutlineLocationMarker className="w-6 h-6 text-purple-500" /> },
+    { title: 'Email Queries', detail: 'placements@sspu.edu.in', sub: 'For company registration & drives', icon: <HiOutlineMail className="w-6 h-6 text-primary-500" /> },
+    { title: 'Helpline Number', detail: '+91 281 2924155', sub: 'Mon to Sat: 9:00 AM to 5:00 PM', icon: <HiOutlinePhone className="w-6 h-6 text-pink-500" /> },
+    { title: 'Placement Address', detail: 'Central Placement Office, SSPU Campus', sub: 'Kalawad Road, Rajkot, Gujarat 360005', icon: <HiOutlineLocationMarker className="w-6 h-6 text-purple-500" /> },
     { title: 'Office Hours', detail: '09:00 AM - 05:00 PM', sub: 'Except Sundays & Public Holidays', icon: <HiOutlineClock className="w-6 h-6 text-green-500" /> },
   ];
 
@@ -129,8 +129,8 @@ const Contact = () => {
             {/* Map Frame */}
             <div className="rounded-3xl overflow-hidden border border-dark-100 dark:border-dark-800 shadow-md h-56 bg-white dark:bg-dark-900">
               <iframe
-                title="LJ Campus Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m14!1m8!1m3!1d14686.079237699317!2d72.4880521!3d22.955519!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9bca9a555555%3A0xd14df834460f1b2b!2sL.J.%20University!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                title="SSPU Campus Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m14!1m8!1m3!1d14766.126442651478!2d70.7423377!3d22.2957519!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959c98a3e755555%3A0xe54e6fffa3d386bb!2sSaurashtra%20University!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

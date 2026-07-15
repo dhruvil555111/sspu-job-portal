@@ -5,6 +5,7 @@ import { useAuth } from '../../context/AuthContext';
 import { useTheme } from '../../context/ThemeContext';
 import { HiOutlineMenu, HiOutlineX, HiOutlineSun, HiOutlineMoon, HiOutlineBell, HiOutlineUser, HiOutlineLogout, HiOutlineChevronDown, HiOutlineBriefcase, HiOutlineAcademicCap, HiOutlineOfficeBuilding, HiOutlineHome, HiOutlineMail, HiOutlineTrendingUp, HiOutlineCalendar } from 'react-icons/hi';
 import { HiOutlineSparkles } from 'react-icons/hi2';
+import logo from '../../assets/logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,32 +34,26 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', path: '/', icon: <HiOutlineHome /> },
-    { name: 'About', path: '/about', icon: <HiOutlineUser className="w-4 h-4" /> },
     { name: 'Jobs', path: '/jobs', icon: <HiOutlineBriefcase className="w-4 h-4" /> },
     { name: 'Companies', path: '/companies', icon: <HiOutlineOfficeBuilding className="w-4 h-4" /> },
-    { name: 'Drives', path: '/placement-drives', icon: <HiOutlineCalendar className="w-4 h-4" /> },
-    { name: 'Training', path: '/training-programs', icon: <HiOutlineAcademicCap className="w-4 h-4" /> },
-    { name: 'Stats', path: '/statistics', icon: <HiOutlineTrendingUp className="w-4 h-4" /> },
-    { name: 'AI Tools', path: '/ai-tools', icon: <HiOutlineSparkles className="w-4 h-4" /> },
-    { name: 'Calendar', path: '/calendar', icon: <HiOutlineCalendar className="w-4 h-4" /> },
+    { name: 'Candidates', path: '/candidates', icon: <HiOutlineUser className="w-4 h-4" /> },
+    { name: 'About', path: '/about', icon: <HiOutlineUser className="w-4 h-4" /> },
     { name: 'Contact', path: '/contact', icon: <HiOutlineMail className="w-4 h-4" /> },
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'py-2' : 'py-3'} ${scrolled ? (darkMode ? 'bg-dark-900/90 backdrop-blur-xl shadow-2xl shadow-dark-950/50' : 'bg-white/90 backdrop-blur-xl shadow-lg') : 'bg-transparent'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'py-2.5' : 'py-4'} ${scrolled ? (darkMode ? 'bg-dark-900/80 backdrop-blur-xl border-b border-dark-800/80 shadow-2xl shadow-dark-950/40' : 'bg-white/80 backdrop-blur-xl border-b border-dark-100/80 shadow-md') : (location.pathname === '/' ? 'bg-transparent' : (darkMode ? 'bg-dark-900/40 backdrop-blur-md' : 'bg-white/40 backdrop-blur-md'))}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-14">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
             <div className="relative">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center shadow-lg shadow-primary-500/30 group-hover:shadow-primary-500/50 transition-all duration-300 group-hover:scale-110">
-                <span className="text-white font-bold text-lg font-display">LJ</span>
-              </div>
-              <div className="absolute -top-1 -right-1 w-3 h-3 bg-success-500 rounded-full border-2 border-white dark:border-dark-900 animate-pulse" />
+              <img src={logo} alt="SSPU Logo" className="w-10 h-10 rounded-xl object-contain bg-white p-0.5 border border-dark-200/50 shadow-md group-hover:scale-110 transition-transform duration-300" />
+              <div className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-success-500 rounded-full border-2 border-white dark:border-dark-900 animate-pulse" />
             </div>
-            <div className="hidden sm:block">
-              <h1 className={`font-display font-bold text-lg leading-tight ${scrolled ? (darkMode ? 'text-white' : 'text-dark-900') : 'text-white'}`}>Career Connect</h1>
-              <p className={`text-[10px] font-medium tracking-wider uppercase ${scrolled ? (darkMode ? 'text-primary-400' : 'text-primary-600') : 'text-primary-200'}`}>LJ University</p>
+            <div className="hidden sm:block text-left">
+              <h1 className={`font-display font-bold text-base leading-tight ${scrolled ? (darkMode ? 'text-white' : 'text-dark-900') : (location.pathname === '/' ? 'text-white' : (darkMode ? 'text-white' : 'text-dark-900'))}`}>Career Connect</h1>
+              <p className={`text-[9px] font-extrabold tracking-wider uppercase ${scrolled ? (darkMode ? 'text-accent-400' : 'text-primary-700') : (location.pathname === '/' ? 'text-accent-400' : (darkMode ? 'text-accent-400' : 'text-primary-700'))}`}>Shree Saurashtra Patel University</p>
             </div>
           </Link>
 

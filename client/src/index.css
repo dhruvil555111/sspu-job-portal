@@ -1,28 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 
 /* ==========================================
-   LJ Career Connect - Custom Theme
+   SSPU Career Connect - Custom Theme
    ========================================== */
 
 @theme {
-  --color-primary-50: #eef2ff;
-  --color-primary-100: #e0e7ff;
-  --color-primary-200: #c7d2fe;
-  --color-primary-300: #a5b4fc;
-  --color-primary-400: #818cf8;
-  --color-primary-500: #6366f1;
-  --color-primary-600: #4f46e5;
-  --color-primary-700: #4338ca;
-  --color-primary-800: #3730a3;
-  --color-primary-900: #312e81;
+  --color-primary-50: #f0f4ff;
+  --color-primary-100: #e0e9fe;
+  --color-primary-200: #c0d3fd;
+  --color-primary-300: #93b3fc;
+  --color-primary-400: #608cfa;
+  --color-primary-500: #0f4cdb;
+  --color-primary-600: #0d3eb5;
+  --color-primary-700: #1e3a8a;
+  --color-primary-800: #172d6b;
+  --color-primary-900: #0e1c45;
 
-  --color-accent-400: #f472b6;
-  --color-accent-500: #ec4899;
-  --color-accent-600: #db2777;
+  --color-accent-400: #fbbf24;
+  --color-accent-500: #f59e0b;
+  --color-accent-600: #d97706;
 
-  --color-success-500: #10b981;
-  --color-warning-500: #f59e0b;
+  --color-success-500: #22c55e;
+  --color-warning-500: #eab308;
   --color-danger-500: #ef4444;
 
   --color-dark-50: #f8fafc;
@@ -37,8 +37,8 @@
   --color-dark-900: #0f172a;
   --color-dark-950: #020617;
 
-  --font-sans: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
-  --font-display: 'Outfit', 'Inter', sans-serif;
+  --font-sans: 'Poppins', 'Segoe UI', sans-serif;
+  --font-display: 'Poppins', 'Outfit', sans-serif;
 }
 
 
@@ -148,19 +148,19 @@ body {
    ========================================== */
 
 .gradient-primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #0f4cdb 0%, #1e3a8a 100%);
 }
 
 .gradient-hero {
-  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 40%, #312e81 70%, #4338ca 100%);
+  background: linear-gradient(135deg, #0e1c45 0%, #172d6b 40%, #0f4cdb 100%);
 }
 
 .gradient-card {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(168, 85, 247, 0.1));
+  background: linear-gradient(135deg, rgba(15, 76, 219, 0.08) 0%, rgba(30, 58, 138, 0.08) 100%);
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #667eea, #764ba2, #ec4899);
+  background: linear-gradient(135deg, #0f4cdb, #1e3a8a, #3b82f6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

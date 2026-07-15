@@ -36,9 +36,7 @@ export const updateCompany = async (req, res) => {
 // @route   GET /api/recruiter/applications
 export const getApplications = async (req, res) => {
   try {
-    const company = await Company.findOne({ recruiters: req.user.id });
-    if (!company) return res.status(404).json({ success: false, message: 'Company not found' });
-    const jobs = await Job.find({ company: company._id }).select('_id');
+    const jobs = await Job.find({ postedBy: req.user.id }).select('_id');
     const jobIds = jobs.map(j => j._id);
     const { status, jobId, page = 1, limit = 20 } = req.query;
     const query = { job: { $in: jobIds } };
@@ -70,20 +68,44 @@ export const updateApplicationStatus = async (req, res) => {
   } catch (error) { res.status(500).json({ success: false, message: error.message }); }
 };
 
-// @desc    Get recruiter dashboard stats
-// @route   GET /api/recruiter/dashboard
 export const getDashboard = async (req, res) => {
   try {
     const company = await Company.findOne({ recruiters: req.user.id });
-    if (!company) return res.status(404).json({ success: false, message: 'Company not found' });
-    const totalJobs = await Job.countDocuments({ company: company._id });
-    const activeJobs = await Job.countDocuments({ company: company._id, status: 'active' });
-    const jobs = await Job.find({ company: company._id }).select('_id');
+    if (!company) {
+      return res.status(200).json({
+        success: true,
+        stats: {
+          totalPostings: 0,
+          activePostings: 0,
+          applicationsReceived: 0,
+          shortlistedCandidates: 0,
+          hiredCandidates: 0
+        },
+        company: null,
+        recentApplications: []
+      });
+    }
+    const totalJobs = await Job.countDocuments({ postedBy: req.user.id });
+    const activeJobs = await Job.countDocuments({ postedBy: req.user.id, status: 'active' });
+    const jobs = await Job.find({ postedBy: req.user.id }).select('_id');
     const jobIds = jobs.map(j => j._id);
     const totalApplications = await Application.countDocuments({ job: { $in: jobIds } });
     const shortlisted = await Application.countDocuments({ job: { $in: jobIds }, status: 'shortlisted' });
     const selected = await Application.countDocuments({ job: { $in: jobIds }, status: 'selected' });
     const recentApplications = await Application.find({ job: { $in: jobIds } }).populate('user', 'name email avatar').populate('job', 'title').sort('-appliedAt').limit(5);
-    res.status(200).json({ success: true, stats: { totalJobs, activeJobs, totalApplications, shortlisted, selected }, company, recentApplications });
-  } catch (error) { res.status(500).json({ success: false, message: error.message }); }
+    res.status(200).json({
+      success: true,
+      stats: {
+        totalPostings: totalJobs,
+        activePostings: activeJobs,
+        applicationsReceived: totalApplications,
+        shortlistedCandidates: shortlisted,
+        hiredCandidates: selected
+      },
+      company,
+      recentApplications
+    });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
 };

@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 /**
  * Department Model - Dynamic department management
- * Supports all LJ University departments and future additions
+ * Supports all Shree Saurashtra Patel University departments and future additions
  */
 const departmentSchema = new mongoose.Schema({
   name: {

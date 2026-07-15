@@ -39,9 +39,23 @@ const Register = () => {
     if (formData.password !== formData.confirmPassword) {
       toast.error('Passwords do not match'); return;
     }
+
+    const payload = { ...formData };
+    if (payload.role === 'student' || payload.role === 'alumni') {
+      if (!payload.department || payload.department === '') {
+        toast.error('Please select a department');
+        return;
+      }
+    } else {
+      // Remove department and other student-specific fields for recruiters
+      delete payload.department;
+      delete payload.passingYear;
+      delete payload.program;
+    }
+
     setLoading(true);
     try {
-      const data = await register(formData);
+      const data = await register(payload);
       toast.success(data.message || 'Registration successful!');
     } catch (error) {
       toast.error(error.response?.data?.message || 'Registration failed');
@@ -65,10 +79,10 @@ const Register = () => {
         <div className="bg-white dark:bg-dark-800 rounded-3xl shadow-2xl border border-dark-100 dark:border-dark-700 p-8 sm:p-10">
           <div className="text-center mb-8">
             <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center mx-auto mb-4 shadow-lg shadow-primary-500/25">
-              <span className="text-white font-bold text-2xl font-display">LJ</span>
+              <span className="text-white font-bold text-xl font-display">SSPU</span>
             </div>
             <h1 className="text-2xl font-display font-bold text-dark-900 dark:text-white">Create Account</h1>
-            <p className="text-dark-500 mt-2 text-sm">Join LJ Career Connect today</p>
+            <p className="text-dark-500 mt-2 text-sm">Join SSPU Career Connect today</p>
           </div>
 
           {/* Step indicators */}

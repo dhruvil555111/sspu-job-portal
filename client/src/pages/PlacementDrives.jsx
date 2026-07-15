@@ -71,7 +71,7 @@ const PlacementDrives = () => {
             Placement Drives
           </h1>
           <p className="text-sm text-dark-500 dark:text-dark-400 mt-2 max-w-xl">
-            Register and prepare for upcoming campus placement drives organized by LJ University placement cell.
+            Register and prepare for upcoming campus placement drives organized by Shree Saurashtra Patel University placement cell.
           </p>
         </div>
 
@@ -136,7 +136,7 @@ const PlacementDrives = () => {
                       </div>
                       <div className="flex items-center gap-2">
                         <HiOutlineLocationMarker className="w-4 h-4 text-pink-500 shrink-0" />
-                        <span>{drive.venue || 'LJ Campus Auditorium'}</span>
+                        <span>{drive.venue || 'SSPU Campus Auditorium'}</span>
                       </div>
                       <div className="flex items-center gap-2 col-span-2">
                         <HiOutlineAcademicCap className="w-4 h-4 text-purple-500 shrink-0" />

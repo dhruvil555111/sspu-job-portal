@@ -12,7 +12,19 @@ import { sendEmail, emailTemplates } from '../utils/email.js';
 // @access  Public
 export const register = async (req, res) => {
   try {
+    if (!req.body.department || req.body.department === "") {
+      delete req.body.department;
+    }
+
     const { name, email, password, role, phone, department } = req.body;
+
+    // Validation for student/alumni
+    if ((role === 'student' || role === 'alumni') && !department) {
+      return res.status(400).json({
+        success: false,
+        message: 'Please select a department',
+      });
+    }
 
     // Check if user exists
     const existingUser = await User.findOne({ email });
@@ -30,7 +42,7 @@ export const register = async (req, res) => {
       password,
       role: role || 'student',
       phone,
-      department,
+      department: department || undefined,
     });
 
     // If student, create student profile
@@ -50,7 +62,7 @@ export const register = async (req, res) => {
     // Send welcome email with OTP
     await sendEmail({
       to: user.email,
-      subject: 'Welcome to LJ Career Connect - Verify Your Email',
+      subject: 'Welcome to SSPU Career Connect - Verify Your Email',
       html: emailTemplates.otp(user.name, otp),
     });
 
@@ -220,7 +232,7 @@ export const resendOTP = async (req, res) => {
 
     await sendEmail({
       to: user.email,
-      subject: 'LJ Career Connect - New OTP',
+      subject: 'SSPU Career Connect - New OTP',
       html: emailTemplates.otp(user.name, otp),
     });
 
@@ -253,7 +265,7 @@ export const forgotPassword = async (req, res) => {
 
     await sendEmail({
       to: user.email,
-      subject: 'LJ Career Connect - Password Reset OTP',
+      subject: 'SSPU Career Connect - Password Reset OTP',
       html: emailTemplates.otp(user.name, otp),
     });
 

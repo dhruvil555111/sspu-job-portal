@@ -6,8 +6,8 @@ import { useState } from 'react';
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
   const faqs = [
-    { q: 'How do I register on LJ Career Connect?', a: 'Click the Register button, select your role (Student/Recruiter), fill in your details, verify your email with OTP, and complete your profile to start applying.' },
-    { q: 'Which departments are eligible for placements?', a: 'All departments of LJ University are eligible including Engineering, MCA, BCA, MBA, BBA, B.Sc IT, Commerce, Architecture, Pharmacy, Physiotherapy, Law, Design, and more.' },
+    { q: 'How do I register on SSPU Career Connect?', a: 'Click the Register button, select your role (Student/Recruiter), fill in your details, verify your email with OTP, and complete your profile to start applying.' },
+    { q: 'Which departments are eligible for placements?', a: 'All departments of Shree Saurashtra Patel University are eligible including Computer Science, Information Technology, Commerce, Management, Arts, Science, Pharmacy, Law, Engineering, and Education.' },
     { q: 'How can recruiters post job openings?', a: 'Recruiters can register their company, get verified by the placement cell, and then post jobs/internships directly through their dashboard.' },
     { q: 'What is the placement process?', a: 'Companies register → Jobs are posted → Students apply → TPO approves → Shortlisting → Interviews → Selection → Offer Letters. Everything is managed through the portal.' },
     { q: 'Can alumni access the portal?', a: 'Yes! Alumni can register, update their profiles, and access job opportunities. They can also contribute as mentors and share success stories.' },
@@ -55,7 +55,7 @@ const CTASection = () => {
             <HiOutlineAcademicCap className="w-10 h-10 text-white" />
           </div>
           <h2 className="text-3xl sm:text-5xl font-display font-bold text-white mb-6">Ready to Launch Your <span className="text-gradient">Career?</span></h2>
-          <p className="text-dark-300 text-lg mb-10 max-w-2xl mx-auto">Join thousands of LJ University students who have already found their dream jobs through Career Connect.</p>
+          <p className="text-dark-300 text-lg mb-10 max-w-2xl mx-auto">Join thousands of Shree Saurashtra Patel University students who have already found their dream jobs through Career Connect.</p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link to="/register" className="group inline-flex items-center gap-2 px-10 py-4 bg-white text-primary-700 font-bold rounded-2xl shadow-2xl hover:shadow-white/25 transition-all duration-300 hover:scale-105">
               Register Now <HiOutlineArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

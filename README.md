@@ -1,6 +1,6 @@
-# LJ Career Connect 🚀
+# SSPU Career Connect 🚀
 
-> Full-Stack MERN College Job Portal for LJ University
+> Full-Stack MERN College Job Portal for Shree Saurashtra Patel University
 
 ## 🏗️ Tech Stack
 
@@ -124,4 +124,4 @@ Engineering, Computer Applications, MBA, BBA, Commerce, Applied Sciences, Archit
 
 ---
 
-Built with ❤️ for LJ University
+Built with ❤️ for Shree Saurashtra Patel University

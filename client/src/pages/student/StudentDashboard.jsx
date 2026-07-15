@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useAuth } from '../../context/AuthContext';
 import { studentAPI, interviewAPI, aiAPI } from '../../services/api';
-import { HiOutlineBriefcase, HiOutlineDocumentText, HiOutlineBookmark, HiOutlineCalendar, HiOutlineUser, HiOutlineArrowRight, HiOutlineCheckCircle, HiOutlineClock, HiOutlineDownload } from 'react-icons/hi';
+import { HiOutlineBriefcase, HiOutlineDocumentText, HiOutlineBookmark, HiOutlineCalendar, HiOutlineUser, HiOutlineArrowRight, HiOutlineCheckCircle, HiOutlineClock, HiOutlineDownload, HiOutlineAcademicCap } from 'react-icons/hi';
 import toast from 'react-hot-toast';
 
 const StudentDashboard = () => {

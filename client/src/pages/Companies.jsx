@@ -46,7 +46,7 @@ const Companies = () => {
               Our Recruitment Partners
             </h1>
             <p className="text-sm text-dark-500 dark:text-dark-400 mt-2 max-w-xl">
-              Meet the global enterprises, startups, and companies that actively recruit student talent from LJ University.
+              Meet the global enterprises, startups, and companies that actively recruit student talent from Shree Saurashtra Patel University.
             </p>
           </div>
           
@@ -120,7 +120,7 @@ const Companies = () => {
 
                   {/* Details */}
                   <p className="text-xs text-dark-500 dark:text-dark-400 line-clamp-3 mb-4 leading-relaxed">
-                    {company.description || 'Global business operations and engineering leader partnering with LJ University placement cells to offer career-launching internships and full-time opportunities.'}
+                    {company.description || 'Global business operations and engineering leader partnering with Shree Saurashtra Patel University placement cells to offer career-launching internships and full-time opportunities.'}
                   </p>
                 </div>
 
